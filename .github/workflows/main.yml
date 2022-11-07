@@ -12,10 +12,10 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Setup Node v15.x
-        uses: actions/setup-node@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 15.x
+          node-version: 16
 
       - name: Generate PDF Action
         uses: tylermneher/resume-tylermneher-gh-action@main
