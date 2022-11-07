@@ -19,7 +19,7 @@ jobs:
       - name: Generate PDF Action
         uses: tylermneher/resume-tylermneher-gh-action@main
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - run: npm ci
       - run: npm test
