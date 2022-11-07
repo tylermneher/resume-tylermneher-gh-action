@@ -1,3 +1,6 @@
+[![GeneratePDF](https://github.com/tylermneher/resume-tylermneher-gh-action/actions/workflows/main.yml/badge.svg)](https://github.com/tylermneher/resume-tylermneher-gh-action/actions/workflows/main.yml)
+
+
 # generatePdf-GHA
 
 This GitHub Action is used by me to generate my Resume PDF using web-scraping (puppeteer) and then update my Resume pdf present in the [Resume Repository](https://github.com/ashuvssut/ashuvssut-resume/tree/download).
