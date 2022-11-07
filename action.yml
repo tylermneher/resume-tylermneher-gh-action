@@ -1,0 +1,20 @@
+name: "Generate PDF Action"
+description: "generate PDF of a webpage using puppeteer upon every push in ashuvssut/ashuvssut-resume repo"
+author: "tylermneher"
+branding:
+  icon: "box"
+  color: "green"
+
+inputs:
+  GITHUB_TOKEN:
+    description: "GitHub token"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Creating Commit
+      env:
+        GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}
+      run: node ${{ github.action_path }}/src/action.js
+      shell: bash
