@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Setup Node v15.x
         uses: actions/setup-node@v2
         with:
@@ -16,4 +20,4 @@ jobs:
       - name: Generate PDF Action
         uses: tylermneher/resume-tylermneher-gh-action@main
         with:
-          GITHUB_TOKEN: ${{secrets.MY_TOKEN}}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
