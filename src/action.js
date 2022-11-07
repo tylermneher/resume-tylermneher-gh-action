@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer-core");
 // for testing only
 // require("dotenv").config();
 
-const getFileSha = async (octokit, pdfPath, owner, repo, branch = "resume") => {
+const getFileSha = async (octokit, pdfPath, owner, repo, branch = "main") => {
   const pdfContent = await octokit.rest.repos.getContent({
     owner,
     repo,
@@ -88,8 +88,8 @@ const main = async () => {
   const octokit = github.getOctokit(GITHUB_TOKEN);
 
   const OWNER = "tylermneher";
-  const REPO = "tylermneher-resume";
-  const BRANCH = "download";
+  const REPO = "resume-tylermneher-gh-action";
+  const BRANCH = "main";
   const PDF_PATH = "tylermneher-resume.pdf";
   const pdfBase64 = await getPdfBase64();
   await uploadToRepo(octokit, PDF_PATH, pdfBase64, OWNER, REPO, BRANCH);
