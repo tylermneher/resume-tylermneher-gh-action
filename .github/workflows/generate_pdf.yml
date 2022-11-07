@@ -16,6 +16,6 @@ jobs:
           node-version: 15.x
 
       - name: Generate PDF Action
-        uses: tylermneher/generatePdf-GHA@main
+        uses: tylermneher/resume-tylermneher-gh-action@main
         with:
           GITHUB_TOKEN: ${{secrets.MY_TOKEN}}
